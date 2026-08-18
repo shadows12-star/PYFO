@@ -1,0 +1,24 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: ai-document-intelligence
+
+    ports:
+      - "8501:8501"
+
+    env_file:
+      - .env
+
+    environment:
+      - PYTHONUNBUFFERED=1
+
+    volumes:
+      - vectorstore_data:/app/vectorstore
+
+    restart: unless-stopped
+
+volumes:
+  vectorstore_data:

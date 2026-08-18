@@ -1,0 +1,17 @@
+.git
+.gitignore
+.env
+.venv
+venv
+env
+__pycache__
+*.pyc
+.pytest_cache
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+vectorstore
+chroma
+chroma_db
+*.log
